@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     
-    <div className="flex  justify-center bg-indigo-900 text-white fixed bottom-0 w-full" >
+    <div className="flex  justify-center bg-indigo-900 text-white " >
       <div className="container flex flex-col items-center py-4 text-xl">
         <h2 className="font-bold">
             Blog Pessoal Josadaque Ferreira | Copyright: {data}
