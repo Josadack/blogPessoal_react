@@ -27,11 +27,20 @@ function Navbar() {
                    </Link> 
                    <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-gray-950 group-hover:w-full"></span>
                    </p>
+                   
                     <div className='flex gap-4'>
                          Postagens
+
+                         <Link to='/temas' className='hover:underline'>
                          Temas
+                         </Link>
+
+                         <Link to='/cadastrartema' className='hover:underline'>
                          Cadastrar tema
+                         </Link>
+
                          Perfil
+                         
                         <Link to='' onClick={logout} className="hover:underline">
                          Sair
                         </Link>
