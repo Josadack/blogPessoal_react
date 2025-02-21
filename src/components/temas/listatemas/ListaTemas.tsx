@@ -4,7 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext"
 import Tema from "../../../models/Tema"
 import CardTemas from "../cardtemas/CardTemas"
 import { buscar } from "../../../services/Service"
-import { DNA } from "react-loader-spinner"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
  
 function ListaTemas() {
 
@@ -53,13 +53,10 @@ function ListaTemas() {
     return (
         <>
             {temas.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
+                <DotLottieReact
+                src="https://lottie.host/42bfe1c6-586b-4972-8955-a72c3cee277e/3bEPSAZYsw.lottie"
+                loop
+                autoplay
                 />
             )}
              <div className="flex justify-center w-full my-4">  
