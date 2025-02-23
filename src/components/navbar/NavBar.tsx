@@ -3,11 +3,14 @@ import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../contexts/AuthContext"
 
 
+
 function Navbar() {
 
     const navigate = useNavigate();
 
     const{handleLogout} = useContext(AuthContext)
+
+   const { usuario } = useContext(AuthContext)
 
     function logout(){
         handleLogout()
@@ -28,6 +31,7 @@ function Navbar() {
                    <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-gray-950 group-hover:w-full"></span>
                    </p>
                    
+                  
                     <div className='flex gap-4'>
                          <Link to='/postagens' className='hover:underline'>
                          Postagens
@@ -41,8 +45,14 @@ function Navbar() {
                          Cadastrar tema
                          </Link>
 
-                         Perfil
-                         
+                         <Link to='/perfil' className='hover:underline'>
+                         <img
+                        src={usuario?.foto}
+                        className='h-12 rounded-full' 
+                        alt="Perfil"
+                        />
+                         </Link>
+
                         <Link to='' onClick={logout} className="hover:underline">
                          Sair
                         </Link>

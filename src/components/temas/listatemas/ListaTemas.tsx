@@ -59,7 +59,7 @@ function ListaTemas() {
                 autoplay
                 />
             )}
-             <div className="flex justify-center w-full my-4">  
+             <div className="flex justify-center w-full my-4 ">  
                 <input  
                     type="text"  
                     placeholder="Buscar por descrição"  
