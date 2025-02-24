@@ -3,6 +3,7 @@ import { AuthContext } from "../../../contexts/AuthContext"
 import { useNavigate, useParams } from "react-router-dom"
 import Usuario from "../../../models/Usuario";
 import { atualizar, buscar } from "../../../services/Service";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 
 
@@ -36,7 +37,7 @@ function FormPerfil() {
 
  useEffect(() => {
     if (token === '') {
-        alert('Você precisa estar logado');
+        ToastAlerta('Você precisa estar logado', 'info');
         navigate('/');
     }
 }, [token])
@@ -80,17 +81,17 @@ async function atualizarPerfil(e: ChangeEvent<HTMLFormElement>){
                 }
             })
 
-            alert('Usuário atualizado com sucesso❗')
+            ToastAlerta('Usuário atualizado com sucesso❗', 'sucesso')
 
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()
             } else {
-                alert('Erro ao atualizar a Postagem')
+                ToastAlerta('Erro ao atualizar a Postagem', 'erro')
             }
         }
     }else{
-        alert('Dados do usuario estão inconsistente! Verifique')
+        ToastAlerta('Dados do usuario estão inconsistente! Verifique', 'info')
         setUsuarios({...usuarios, senha: ''})
         setConfirmarSenha('')
     }

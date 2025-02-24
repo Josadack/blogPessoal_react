@@ -1,3 +1,4 @@
+
 import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
 import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem";
 
