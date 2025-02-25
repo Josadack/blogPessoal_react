@@ -25,9 +25,9 @@ function Navbar() {
 
         componente = (
             <div className='w-full flex justify-center py-4
-            bg-indigo-900 text-white'>
+            bg-gray-800 text-white'>
 
- <div className="container flex justify-between text-lg w-full relative flex-wrap gap-3">
+ <div className="container flex justify-between text-lg w-full relative flex-wrap gap-3 text-violet-500">
      <p className="text-lg  group relative w-max">
     <Link to='/home' className="text-2xl font-bold">
     <span>Blog Pessoal</span>
@@ -36,7 +36,7 @@ function Navbar() {
     </p>
     
    
-     <div className='flex gap-4'>
+     <div className='flex gap-4 text-violet-400 hover:text-white'>
           <Link to='/postagens' className='hover:underline'>
           Postagens
           </Link>

@@ -69,52 +69,51 @@ function retornar(){
     console.log(JSON.stringify(usuario))
   return (
    <>
-   <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
-            place-items-center font-bold">
-    <div className="fundoCadastro hidden lg:block"></div>
+   <div className="h-screen flex justify-center items-center font-bold fundoCadastro ">
+    {/* <div className="fundoCadastro hidden lg:block"></div> */}
         <form 
-        className='flex justify-center items-center flex-col w-2/3 gap-3'
+        className='flex justify-center items-center flex-col w-1/3 gap-3 border-3 rounded-3xl p-4 backdrop-blur-sm border-amber-50 text-blue-200 '
         onSubmit={cadastrarNovoUsuario}>
-            <h2 className="text-slate-900 text-5xl"> Cadastrar</h2>
+            <h2 className="text-blue-200 text-5xl"> Cadastrar</h2>
 
-                <div className="flex flex-col w-full">
-                    <label htmlFor="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Nome" className="border-2 border-slate-700 p-2"
+                <div className="flex flex-col w-full border-b-2">
+                    <label htmlFor="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" className=" p-2 focus:outline-none"
                     value={usuario.nome}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}>
                     </input>
                 </div>
 
-                <div className="flex flex-col w-full">
-                    <label htmlFor="usuario">Usuário</label>
-                    <input type="text" id="usuario" name="usuario" placeholder="Usuário" className="border-2 border-slate-700 p-2"
+                <div className="flex flex-col w-full border-b-2">
+                    <label htmlFor="usuario"></label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuário" className="b p-2"
                     value={usuario.usuario}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}>
                     </input>
                 </div>    
                  
-                <div className="flex flex-col w-full">
-                    <label htmlFor="foto">Foto</label>
-                    <input type="text" id="foto" name="foto" placeholder="Foto" className="border-2 border-slate-700 rounded p-2"
+                <div className="flex flex-col w-full border-b-2">
+                    <label htmlFor="foto"></label>
+                    <input type="text" id="foto" name="foto" placeholder="Foto" className=" rounded p-2"
                     value={usuario.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
                 </div>
 
-                <div className="flex flex-col w-full">
-                   <label htmlFor="senha">Senha</label>
-                   <input type="password" id="senha" name="senha" placeholder="Senha"  className="border-2 border-slate-700 rounded p-2"
+                <div className="flex flex-col w-full border-b-2">
+                   <label htmlFor="senha"></label>
+                   <input type="password" id="senha" name="senha" placeholder="Senha"  className=" rounded p-2"
                    value={usuario.senha}
                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
                 </div>
 
-               <div className="flex flex-col w-full">
-                    <label htmlFor="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirmar Senha"  className="border-2 border-slate-700 rounded p-2"
+               <div className="flex flex-col w-full border-b-2">
+                    <label htmlFor="confirmarSenha"></label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirmar Senha"  className="rounded p-2"
                     value={confirmarSenha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}/>
                </div>
 
-               <div className="flex justify-around w-full gap-8">
+               <div className="flex justify-around w-full gap-8 p-2">
                     <button type='reset' className='rounded text-white bg-red-400 
                   hover:bg-red-700 w-1/2 py-2'
                   onClick={retornar} >

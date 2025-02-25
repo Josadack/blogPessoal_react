@@ -33,23 +33,33 @@ function Login() {
   }
   return (
    <>
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+    <div className="h-screen flex justify-center items-center font-bold fundoLogin">
       <form 
-      className="flex justify-center items-center flex-col w-1/2 gap-4"
+      className="flex justify-center items-center flex-col w-[450px] gap-6 border-3 rounded-3xl p-5 backdrop-blur-sm border-amber-50 text-blue-200"
       onSubmit={login} 
       >
-        <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+        <h2 className="text-blue-200 text-5xl ">Login</h2>
 
-          <div className='flex flex-col w-full'>
-            <label htmlFor="usuario">Usuário</label>
-            <input type="text" name="usuario" id="usuario" placeholder='Usuário' className='border-2 border-slate-700 p-2'
+          <div className='flex flex-col w-full border-b'>
+            <label htmlFor="usuario"></label>
+            <input 
+            type="text" 
+            name="usuario" 
+            id="usuario" 
+            placeholder='Usuário' 
+            className='gap-2 py-1 focus:outline-none'
             value={usuarioLogin.usuario}
             onChange={(e: ChangeEvent<HTMLInputElement>)=> atualizarEstado(e)}/>
          </div>
 
-         <div className='flex flex-col w-full'>
-            <label htmlFor="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder='Senha' className='border-2 border-slate-700 p-2'
+         <div className='flex flex-col w-full border-b '>
+            <label htmlFor="senha"></label>
+            <input 
+            type="password" 
+            name="senha" 
+            id="senha" 
+            placeholder='Senha' 
+            className='gap-2 py-1 focus:outline-none'
               value={usuarioLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>)=> atualizarEstado(e)}
               />
@@ -71,7 +81,7 @@ function Login() {
                                 }
                                 
                    </button>
-        <hr className='border-slate-800 w-full'/>
+        <hr className='border-indigo-600 w-full  '/>
 
         <p>
           Ainda não tem uma conta?{' '}
@@ -80,7 +90,7 @@ function Login() {
         </p>
      
       </form>
-      <div className="fundoLogin hidden lg:block"></div>
+      {/* <div className="fundoLogin hidden lg:block"></div> */}
     </div>
 
     </>

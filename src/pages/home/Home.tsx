@@ -1,4 +1,5 @@
 
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
 import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem";
 
@@ -7,7 +8,7 @@ function Home() {
     return (
 
     <>
-      <div className="flex justify-center bg-indigo-900" >
+      <div className="flex justify-center bg-gray-800" >
         <div  className="container grid grid-cols-2 text-white">
           <div className="flex flex-col items-center justify-center gap-4 py-4">
             <h2 className="text-2xl sm:text-5xl font-bold">
@@ -27,6 +28,7 @@ function Home() {
           </div>
    
           <div className="flex justify-center ">
+      
             <img
               src="https://ik.imagekit.io/oois5ivj4v/online-world-animate.svg?updatedAt=1739555802260"
               alt="Imagem da Página Home"

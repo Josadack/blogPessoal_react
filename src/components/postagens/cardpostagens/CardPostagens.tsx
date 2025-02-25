@@ -7,14 +7,14 @@ interface CardPostagensProps {
 
 function CardPostagem({ postagem }: CardPostagensProps) {
     return (
-        <div className='border-slate-900 border 
-            flex flex-col rounded overflow-hidden justify-between'>
+        <div className='border-slate-500 border 
+            flex flex-col rounded overflow-hidden justify-between  hover:-translate-y-2 shadow-xl shadow-gray-500/50'>
                 
             <div>
-                <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
+                <div className="flex w-full bg-gray-900 py-2 px-4 items-center gap-4 text-violet-500 ">
                     <img
                         src={postagem.usuario?.foto}
-                        className='h-12 rounded-full'
+                        className='h-12 rounded-full border-2'
                         alt={postagem.usuario?.nome} />
                     <h3 className='text-lg font-bold text-center uppercase'>
                         {postagem.usuario?.nome}
@@ -32,8 +32,8 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             </div>
             <div className="flex">
                 <Link to={`/editarpostagem/${postagem.id}`} 
-                    className='w-full text-white bg-indigo-400 
-                    hover:bg-indigo-800 flex items-center justify-center py-2'>
+                    className='w-full text-white bg-gray-700 
+                    hover:bg-gray-900 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
                 <Link to={`/deletarpostagem/${postagem.id}`} 
