@@ -63,7 +63,7 @@ function FormTema() {
 
     async function gerarNovoTema(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
-            setIsLoading(true)
+            setIsLoading(true);
 
             if(id !== undefined){
 

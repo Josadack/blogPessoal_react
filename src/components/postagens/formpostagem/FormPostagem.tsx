@@ -67,7 +67,6 @@ function FormPostagem() {
 
     useEffect(() => {
         buscarTemas()
-
         if (id !== undefined) {
             buscarPostagemPorId(id)
         }
