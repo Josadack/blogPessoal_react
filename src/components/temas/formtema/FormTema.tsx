@@ -49,7 +49,6 @@ function FormTema() {
         }
     }, [id])
     
-
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setTema({
             ...tema,
